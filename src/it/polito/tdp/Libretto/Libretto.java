@@ -13,7 +13,9 @@ public class Libretto {
 	
 	/*
 	 * public void add(int voto, String corso, LocalDate data) {}
-	 * sbagliato perchè più complicato se un giorno la struttura della classe Voto viene modificata */ 
+	 * 
+	 * sbagliato perchè più complicato se un giorno la struttura della classe Voto viene modificata 
+	 */ 
 	
 	/**
 	 * Aggiunge un nuovo voto al libretto
@@ -33,7 +35,7 @@ public class Libretto {
 	 */
 	
 	/**
-	 *Seleziona il sottoinsieme di voti che hanno il punteggio specificato
+	 * Seleziona il sottoinsieme di voti che hanno il punteggio specificato
 	 * @param voto punteggio da ricercare
 	 * @return lista di {@link Voto} aventi quel punteggio (eventualmente vuota)
 	 */
@@ -48,4 +50,17 @@ public class Libretto {
 		return result; 
 	}
 
+	/**
+	 * Ricerca un {@link Voto} relativo al corso di cui è specificato il nome
+	 * @param nome Esame nome del corso da ricercare
+	 * @return il {@link Voto} corrispondente, oppure {@code null} se non esistente
+	 */
+	public Voto cercaEsame(String nomeEsame) {
+		for(Voto v:this.voti) {
+			if(v.getCorso().equals(nomeEsame)) {	//con == viene confrontata la posizione in memoria dei due oggetti,
+				return v; 							//compareTo lo uso solo quando gli oggetti che sono confrontati sono ordinabili
+			}
+		}
+		return null; 
+	}
 }

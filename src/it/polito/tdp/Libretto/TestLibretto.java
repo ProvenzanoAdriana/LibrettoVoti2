@@ -23,6 +23,11 @@ public class TestLibretto {
 		System.out.println(trenta);
 		
 		//in tutto nel nostro programma abbiamo 10 (Non 13!!) oggetti di tipo Voto
+		
+		Voto a1=libr.cercaEsame("Analisi I"); 
+		Voto a3=libr.cercaEsame("Analisi III");
+		System.out.println(a1); 
+		System.out.println(a3); 
 
 	}
 
