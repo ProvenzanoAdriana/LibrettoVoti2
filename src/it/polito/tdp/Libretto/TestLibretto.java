@@ -40,13 +40,19 @@ public class TestLibretto {
 		System.out.format("Il voto %s e' in conflitto %s\n", sbagliato.toString(), libr.votoConflitto(sbagliato));
 		System.out.format("Il voto %s e' in conflitto %s\n", mancante.toString(), libr.votoConflitto(mancante));
 		
-		
-	
 		System.out.println(libr.add(giusto));
 		System.out.println(libr.add(sbagliato));
 		System.out.println(libr.add(mancante));
 		System.out.println(libr.toString()); 
 
+		System.out.println("***Migliora il libretto***");
+		Libretto libr2=libr.miglioraLibretto(); 
+		System.out.println(libr.toString()); 
+		System.out.println(libr2.toString()); 
+		
+		libr2.cancellaVotiScarsi(); 
+		System.out.println(libr2.toString()); 
+		
 
 	}
 
